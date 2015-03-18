@@ -1,3 +1,16 @@
+/*
+ *Names: Yuri Van Steenburg
+ 		 Christopher Dancarlo Danan
+ *Created: March 18, 2015
+ *Modified: March 18, 2015
+ *Purpose: It's Rock, Paper, Scissors, Lizard, Spock!!!
+ *References:
+  Dennis Valbuena
+  Sarah Lee
+  Mario Andrade
+  samkass.com/theories/RPSSL.html
+ */
+
 var http = require("http"),
 	server;
 
@@ -41,6 +54,18 @@ function result(playerChoice){
 	var serverChoice = randomChoice();
 	console.log("PLAYER CHOICE: " + playerChoice);
 	console.log("SERVER CHOICE: " + serverChoice);
+	if(playerChoice === "rock"){
+		//Player LOSE
+		if(serverChoice === "spock" || serverChoice === "paper"){
+
+		//Player WIN
+		} else if(serverChoice === "lizard" || serverChoice === "scissors"){
+
+		//TIE
+		} else if(serverChoice === "rock"){
+
+		}
+	}
 }
 
 server = http.createServer(function(req, res){
