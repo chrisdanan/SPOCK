@@ -60,48 +60,108 @@ function result(playerChoice){
 	if(playerChoice === "rock"){
 		//Player LOSE
 		if(serverChoice === "spock" || serverChoice === "paper"){
+			losses++;
 			console.log("Lose");
+			console.log("Number of losses: " + losses);
+			console.log("Number of wins: " + wins);
+			console.log("Number of ties: " + ties);
 		//Player WIN
 		} else if(serverChoice === "lizard" || serverChoice === "scissors"){
+			wins++;
 			console.log("Win");
+			console.log("Number of losses: " + losses);
+			console.log("Number of wins: " + wins);
+			console.log("Number of ties: " + ties);
 		//TIE
 		} else if(serverChoice === "rock"){
+			ties++;
 			console.log("Tie");
+			console.log("Number of losses: " + losses);
+			console.log("Number of wins: " + wins);
+			console.log("Number of ties: " + ties);
 		}
 	} else if(playerChoice === "paper"){
 		//Player LOSE
 		if(serverChoice === "scissors" || serverChoice ==="lizard"){
+			losses++;
 			console.log("Lose");
+			console.log("Number of losses: " + losses);
+			console.log("Number of wins: " + wins);
+			console.log("Number of ties: " + ties);
 		//Player WIN
 		} else if(serverChoice === "spock" || serverChoice ==="rock"){
+			wins++;
 			console.log("Win");
+			console.log("Number of losses: " + losses);
+			console.log("Number of wins: " + wins);
+			console.log("Number of ties: " + ties);
 		//TIE
 		} else if(serverChoice === "paper"){
+			ties++;
 			console.log("Tie");
+			console.log("Number of losses: " + losses);
+			console.log("Number of wins: " + wins);
+			console.log("Number of ties: " + ties);
 		}
 	} else if(playerChoice === "scissors"){
 		if(serverChoice === "rock" || serverChoice ==="spock"){
+			losses++;
 			console.log("Lose");
+			console.log("Number of losses: " + losses);
+			console.log("Number of wins: " + wins);
+			console.log("Number of ties: " + ties);
 		} else if(serverChoice === "paper" || serverChoice === "lizard"){
+			wins++;
 			console.log("Win");
+			console.log("Number of losses: " + losses);
+			console.log("Number of wins: " + wins);
+			console.log("Number of ties: " + ties);
 		} else if(serverChoice === "scissors"){
+			ties++;
 			console.log("Tie");
+			console.log("Number of losses: " + losses);
+			console.log("Number of wins: " + wins);
+			console.log("Number of ties: " + ties);
 		}
 	} else if(playerChoice === "lizard"){
 		if(serverChoice === "rock" || serverChoice === "scissors"){
+			losses++;
 			console.log("Lose");
+			console.log("Number of losses: " + losses);
+			console.log("Number of wins: " + wins);
+			console.log("Number of ties: " + ties);
 		} else if(serverChoice === "paper" || serverChoice === "spock"){
+			wins++;
 			console.log("Win");
+			console.log("Number of losses: " + losses);
+			console.log("Number of wins: " + wins);
+			console.log("Number of ties: " + ties);
 		} else if(serverChoice === "lizard"){
+			ties++;
 			console.log("Tie");
+			console.log("Number of losses: " + losses);
+			console.log("Number of wins: " + wins);
+			console.log("Number of ties: " + ties);
 		}
 	} else if(playerChoice === "spock"){
 		if(serverChoice === "lizard" || serverChoice === "paper"){
+			losses++;
 			console.log("Lose");
+			console.log("Number of losses: " + losses);
+			console.log("Number of wins: " + wins);
+			console.log("Number of ties: " + ties);
 		} else if(serverChoice === "rock" || serverChoice === "scissors"){
+			wins++;
 			console.log("Win");
+			console.log("Number of losses: " + losses);
+			console.log("Number of wins: " + wins);
+			console.log("Number of ties: " + ties);
 		} else if(serverChoice === "spock"){
+			ties++;
 			console.log("Tie");
+			console.log("Number of losses: " + losses);
+			console.log("Number of wins: " + wins);
+			console.log("Number of ties: " + ties);
 		}
 	} else{
 		console.log("Something went wrong");
