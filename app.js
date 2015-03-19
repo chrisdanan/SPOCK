@@ -1,6 +1,7 @@
 /*
  *Names: Yuri Van Steenburg
  		 Christopher Dancarlo Danan
+
  *Created: March 18, 2015
  *Modified: March 18, 2015
  *Purpose: It's Rock, Paper, Scissors, Lizard, Spock!!!
@@ -202,23 +203,23 @@ function result(playerChoice, req, res){
 function getPost(req, res){
 	//res.write('{"test" : "hello_world!"}');
 	console.log(req.url);
-	if(req.url === "/play/rock"){
+	if(req.method === "POST" && req.url === "/play/rock"){
 		//console.log("Client chose rock");
 		//res.write('{"choice" : "rock"}');
 		result("rock", req, res);
-	} else if(req.url === "/play/paper"){
+	} else if(req.method === "POST" && req.url === "/play/paper"){
 		//console.log("Client chose paper");
 		//res.write('{"choice" : "paper"}');
 		result("paper", req, res);
-	} else if(req.url === "/play/scissors"){
+	} else if(req.method === "POST" && req.url === "/play/scissors"){
 		//console.log("Client chose scissors");
 		//res.write('{"choice" : "scissors"}');
 		result("scissors", req, res);
-	} else if(req.url === "/play/lizard"){
+	} else if(req.method === "POST" && req.url === "/play/lizard"){
 		//console.log("Client chose lizard");
 		//res.write('{"choice" : "lizard"}');
 		result("lizard", req, res);
-	} else if(req.url === "/play/spock"){
+	} else if(req.method === "POST" && req.url === "/play/spock"){
 		//console.log("Client chose Spock");
 		//res.write('{"choice" : "spock"}');
 		result("spock", req, res);
@@ -236,3 +237,6 @@ server = http.createServer(function(req, res){
 
 server.listen(3000);
 console.log("Server listening on port 3000");
+
+//t
+//fflvd
