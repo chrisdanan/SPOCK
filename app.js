@@ -12,7 +12,10 @@
  */
 
 var http = require("http"),
-	server;
+	server,
+	wins = 0,
+	losses = 0,
+	ties = 0;
 
 function randomChoice(){
 	var choices = ["rock", "paper", "scissors", "lizard", "spock"],
@@ -57,14 +60,52 @@ function result(playerChoice){
 	if(playerChoice === "rock"){
 		//Player LOSE
 		if(serverChoice === "spock" || serverChoice === "paper"){
-
+			console.log("Lose");
 		//Player WIN
 		} else if(serverChoice === "lizard" || serverChoice === "scissors"){
-
+			console.log("Win");
 		//TIE
 		} else if(serverChoice === "rock"){
-
+			console.log("Tie");
 		}
+	} else if(playerChoice === "paper"){
+		//Player LOSE
+		if(serverChoice === "scissors" || serverChoice ==="lizard"){
+			console.log("Lose");
+		//Player WIN
+		} else if(serverChoice === "spock" || serverChoice ==="rock"){
+			console.log("Win");
+		//TIE
+		} else if(serverChoice === "paper"){
+			console.log("Tie");
+		}
+	} else if(playerChoice === "scissors"){
+		if(serverChoice === "rock" || serverChoice ==="spock"){
+			console.log("Lose");
+		} else if(serverChoice === "paper" || serverChoice === "lizard"){
+			console.log("Win");
+		} else if(serverChoice === "scissors"){
+			console.log("Tie");
+		}
+	} else if(playerChoice === "lizard"){
+		if(serverChoice === "rock" || serverChoice === "scissors"){
+			console.log("Lose");
+		} else if(serverChoice === "paper" || serverChoice === "spock"){
+			console.log("Win");
+		} else if(serverChoice === "lizard"){
+			console.log("Tie");
+		}
+	} else if(playerChoice === "spock"){
+		if(serverChoice === "lizard" || serverChoice === "paper"){
+			console.log("Lose");
+		} else if(serverChoice === "rock" || serverChoice === "scissors"){
+			console.log("Win");
+		} else if(serverChoice === "spock"){
+			console.log("Tie");
+		}
+	} else{
+		console.log("Something went wrong");
+		res.write('{"error": "playerChoice is invalid"}');
 	}
 }
 
